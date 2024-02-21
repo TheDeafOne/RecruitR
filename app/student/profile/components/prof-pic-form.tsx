@@ -12,9 +12,8 @@ export function ProfPicEdit() {
     };
     return (
         <Button onClick={() => refFile.current.click()} variant={'outline'}>
-            <Edit2Icon>
-                <input id="upload" name="upload" type="file" ref={refFile} hidden
-                onChange={handleChange} /></Edit2Icon>
+            <input id="upload" name="upload" type="file" ref={refFile} hidden
+                onChange={handleChange} /> <Edit2Icon></Edit2Icon>
         </Button>
     )
 }
