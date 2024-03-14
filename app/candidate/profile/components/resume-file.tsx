@@ -15,7 +15,7 @@ export function ResumeButton({setPdfName} : {setPdfName: React.Dispatch<React.Se
     const handleChange = (event: any) => {
         const resName = event.target.value.split("\\");
         const resumeRef = ref(storage, "resumes/" + resName.slice(resName.length - 1));
-        uploadBytes(resumeRef, event, newMetaData).then(async (snapshot: any) => {
+        uploadBytes(resumeRef, event).then(async (snapshot: any) => {
             const downLoadURL = await getDownloadURL(snapshot.ref);
             setPdfName(downLoadURL);
             console.log(downLoadURL);
